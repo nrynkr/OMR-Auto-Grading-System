@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Grader</title>
+    <link rel="stylesheet" type="text/css" href="../templates/style.css">
+</head>
+<body>
+    <h1>Multiple Choice Test Grader</h1>
+    <p>Upload an image of the filled-out test:</p>
+
+    <!-- Form for uploading an image -->
+    <form method="POST" enctype="multipart/form-data">
+        <input type="file" name="file" accept=".png, .jpg, .jpeg">
+        <button type="submit">Submit</button>
+    </form>
+
+    <!-- Display the score if available -->
+    {% if score is defined %}
+    <h2>Score: {{ score }}%</h2>
+    {% endif %}
+
+    <!-- Display error messages if any -->
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            <ul class="messages">
+                {% for message in messages %}
+                    <li>{{ message }}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+    {% endwith %}
+</body>
+</html>
