@@ -1,2 +1,2 @@
-# OMR Auto Grading System
- An Autograding System 
+# OMR
+ A Flask Web Application
