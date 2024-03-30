@@ -18,7 +18,7 @@ h1 {
 /* Style the form container */
 form {
     max-width: 400px;
-    margin: 20px auto;
+    margin: 20px auto; 
     background-color: #fff;
     padding: 20px;
     border-radius: 5px;
@@ -48,6 +48,24 @@ button[type="submit"]:hover {
     background-color: #2980b9;
 }
 
+/* Style the Download Button*/
+button[type="download"] {
+    background-color: #3498db;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button[type="download"]:hover {
+    background-color: #2980b9;
+}
+
+.download-btn{
+    display:block;
+    margin: auto;
+}
 /* Style the score display */
 h2 {
     text-align: center;

@@ -170,6 +170,8 @@ ANSWER_KEY = {
 
 # Sample user data structure for in-memory storage
 users = {'full_name':'keval','email':'kevalkrishna2002@gmail.com','password':"abc"}
+users1 = {'full_name':'lakshmi','email':'lakshmi@gmail.com','password':"123"}
+
 
 def is_valid_login(full_name, email, password):
     # Replace this with your actual authentication logic
@@ -177,6 +179,8 @@ def is_valid_login(full_name, email, password):
     # If the credentials are valid, return True; otherwise, return False
     for user in users:
         if users['full_name'] == full_name and users['email'] == email and users['password'] == password:
+            return True
+        elif users1['full_name']==full_name and users1['email']==email and users1['password']==password:
             return True
     return False
         # print(user[0])
@@ -213,7 +217,7 @@ def login():
 # def index():
 def upload_file():
     if 'email' not in session:
-        return redirect(url_for('index.html.')) 
+        return redirect(url_for('login.html')) 
 
     if request.method == 'POST':
         # Check if a file was uploaded
